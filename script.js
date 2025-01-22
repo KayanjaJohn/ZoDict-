@@ -183,6 +183,6 @@ form.addEventListener("submit", (e) => {
 	resultDiv.innerHTML = `
         <h2>Your Zodiac Sign is ${sign}!</h2>
         <p>Sign Dates:  ${signDates}</p>
-        <p>Sign Description: ${signDescription}</p><br>
+        <p>Sign Description: ${signDescription}✨</p><br>
     `;
 });
