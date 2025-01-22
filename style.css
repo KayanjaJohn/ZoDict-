@@ -82,11 +82,30 @@ button{
     top: 10%;
     right: 0;
     left: 0;
+
 }
 
 #horoscope-result h2 {
     margin-top: 0;
 }
+
+
+footer {
+    background:linear-gradient(to top, rgb(2, 3, 5), rgb(110, 91, 250, 0.5));
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    top: 50;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
 
 /* Media Queries */
 
