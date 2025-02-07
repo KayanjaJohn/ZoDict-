@@ -204,7 +204,7 @@ const femaleVoice = voices.filter(
 // Set the text and voice for the utterance
 utterance.text = resultDiv.textContent;
 utterance.voice = femaleVoice || voices[0];
-utterance.pitch = 8;
+utterance.pitch = 1;
 utterance.rate = 0.6;
 utterance.volume = 50;
 

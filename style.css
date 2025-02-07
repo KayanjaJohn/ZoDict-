@@ -36,6 +36,7 @@ body {
 	overflow-x: hidden;
 }
 
+
 #horoscope-form {
 	max-width: 500px;
 	margin: 40px auto;
@@ -254,7 +255,7 @@ footer {
 		border-bottom: 2px solid rgb(255, 255, 255, 0.5);
 		border-bottom-left-radius: 2rem;
 		padding: 1rem solid;
-		background-color: rgb(22, 22, 22, 0.5);
+		background-color: rgb(22, 22, 22, 0.7);
 		border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
 		transition: 0.5s ease;
 	}
