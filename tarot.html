@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac Tarot Readings</title>
+    <link rel="stylesheet" href="tarot.css">
+</head>
+<body>
+    <nav class="navbar">
+            <li><a href="index.html">Horoscope</a></li>
+            <li><a href="zodiac.html">Zodia Signs</a></li>
+            <li><a href="tarot.html">Tarots</a></li>
+        </ul>
+        
+    </nav>
+    <div class="container">
+        <h1>Zodiac Tarot Readings</h1>
+        <form">
+            <label for="zodiac-sign" style="float: left; margin-left: 50px; font-size: 16px; font-weight: 700;">Select your Zodiac Sign:</label><br>
+            <select id="zodiac-sign">
+                <option value="">Select your option</option>
+                <option value="Aries">Aries (March 21 - April 19)</option>
+                <option value="Taurus">Taurus (April 20 - May 20)</option>
+                <option value="Gemini">Gemini (May 21 - June 20)</option>
+                <option value="Cancer">Cancer (June 21 - July 22)</option>
+                <option value="Leo">Leo (July 23 - August 22)</option>
+                <option value="Virgo">Virgo (August 23 - September 22)</option>
+                <option value="Libra">Libra (September 23 - October 22)</option>
+                <option value="Scorpio">Scorpio (October 23 - November 21)</option>
+                <option value="Sagittarius">Sagittarius (November 22 - December 21)</option>
+                <option value="Capricorn">Capricorn (December 22 - January 19)</option>
+                <option value="Aquarius">Aquarius (January 20 - February 18)</option>
+                <option value="Pisces">Pisces (February 19 - March 20)</option>
+            </select>
+            <button id="get-reading-btn">Get Tarot Reading</button>
+            <button id="speak" class="btn">Speak</button>
+            <button id="stop" class="btn">Stop</button>
+        </form>
+        <div id="result-div"></div>
+    </div>
+
+    <script src="tarot.js"></script>
+</body>
+</html>
