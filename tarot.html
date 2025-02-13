@@ -7,17 +7,37 @@
     <link rel="stylesheet" href="tarot.css">
 </head>
 <body>
-    <nav class="navbar">
-            <li><a href="index.html">Horoscope</a></li>
-            <li><a href="zodiac.html">Zodia Signs</a></li>
-            <li><a href="tarot.html">Tarots</a></li>
-        </ul>
-        
-    </nav>
+    <header>
+        <h1>
+            <b><span style="color: rgb(255, 186, 13)">Hor</span>osc<span style="color: rgb(255, 186, 13)">ope</span></b>
+        </h1>
+        <nav>
+            <ul>
+                <li class="nav-content"><a href="#" class="active">Home</a></li>
+                <li class="nav-content"><a href="index.html">Zodia Signs</a></li>
+                <li class="nav-content"><a href="angelNumb.html">Angel No</a></li>
+                <li class="nav-content"><a href="tarot.html">Tarot</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="active nav-content">Home</a></li>
+                <li class="nav-content"><a href="index.html">💫Zodia Signs💫</a></li>
+                <li class="nav-content"><a href="angelNumb.html">Angel Number</a></li>
+                <li class="nav-content"><a href="tarot.html">Tarot readings</a></li>
+                <li>
+                    <button id="theme-toggle" class="btn" style="margin: 3rem 3rem;">Theme</button>
+                </li>
+            </ul>
+        </div>
+    </header>
     <div class="container">
-        <h1>Zodiac Tarot Readings</h1>
+        <h1 style="color: var(--text-color);">Zodiac Tarot Readings</h1>
         <form">
-            <label for="zodiac-sign" style="float: left; margin-left: 50px; font-size: 16px; font-weight: 700;">Select your Zodiac Sign:</label><br>
+            <label for="zodiac-sign" style="float: left; font-size: 16px; font-weight: 700; color: var(--text-color);">Select your Zodiac Sign:</label><br>
             <select id="zodiac-sign">
                 <option value="">Select your option</option>
                 <option value="Aries">Aries (March 21 - April 19)</option>
@@ -39,6 +59,22 @@
         </form>
         <div id="result-div"></div>
     </div>
+
+    <footer>
+        <div id="footer">
+        <p class="label">
+            Developed by
+            <span
+                style="
+                    color: rgb(255, 186, 13);
+                    text-transform: uppercase;
+                    font-style: italic;
+                    font-weight: 800;
+                "
+                >Cage</span
+            >
+        </p>
+    </footer>
 
     <script src="tarot.js"></script>
 </body>

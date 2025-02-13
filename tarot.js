@@ -98,7 +98,6 @@ getReadingBtn.addEventListener("click", (e) => {
 	}
 });
 
-
 // Get the textarea and the buttons
 const speakButton = document.getElementById("speak");
 const stopButton = document.getElementById("stop");
@@ -116,7 +115,7 @@ const femaleVoice = voices.filter(
 utterance.text = resultDiv.textContent;
 utterance.voice = femaleVoice || voices[0];
 utterance.pitch = 8;
-utterance.rate = 0.6;
+utterance.rate = 1.2;
 utterance.volume = 50;
 
 // Add event listeners to the buttons
@@ -131,3 +130,27 @@ stopButton.addEventListener("click", () => {
 	// Cancel the utterance
 	window.speechSynthesis.cancel();
 });
+
+// Light, dark and dim theme
+
+document.getElementById("theme-toggle").addEventListener("click", () => {
+	const currentTheme = document.documentElement.getAttribute("data-theme");
+	let newTheme;
+
+	if (currentTheme === "light") {
+		newTheme = "dim";
+	} else if (currentTheme === "dim") {
+		newTheme = "dark";
+	} else if (currentTheme === "dark") {
+		newTheme = "grin";
+	} else {
+		newTheme = "light";
+	}
+
+	document.documentElement.setAttribute("data-theme", newTheme);
+	localStorage.setItem("theme", newTheme); // Save preference
+});
+
+// Load saved theme on page load
+const savedTheme = localStorage.getItem("theme") || "light";
+document.documentElement.setAttribute("data-theme", savedTheme);

@@ -124,6 +124,7 @@ header {
 }
 
 header h1 {
+    letter-spacing: 6px;
 	text-transform: uppercase;
 	/* float: left; */
 	font-size: 2rem;
@@ -199,12 +200,18 @@ button {
 }
 
 footer {
-	background: linear-gradient(to top, #2f4f7f, rgb(108, 92, 231, 0.5));
+	background: linear-gradient(
+		to top,
+		rgb(47, 79, 127, 0.966),
+		rgb(47, 79, 127, 0.966)
+	);
+	filter: drop-shadow(10px);
 	color: #fff;
 	text-align: center;
+    border: transparent;
 	padding: 20px;
 	font-size: 14px;
-	/* opacity: 0.5; */
+	opacity: 0.869;
 }
 
 .label {

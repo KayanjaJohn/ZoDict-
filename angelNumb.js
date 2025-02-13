@@ -198,9 +198,8 @@ const femaleVoice = voices.filter(
 // Set the text and voice for the utterance
 utterance.text = resultDiv.textContent;
 utterance.voice = femaleVoice || voices[0];
-utterance.pitch = 8;
-utterance.rate = 0.6;
-utterance.volume = 50;
+utterance.pitch = 1;
+utterance.rate = 1.2;
 
 // Add event listeners to the buttons
 speakButton.addEventListener("click", () => {
@@ -214,3 +213,51 @@ stopButton.addEventListener("click", () => {
 	// Cancel the utterance
 	window.speechSynthesis.cancel();
 });
+
+// Light, dark and dim theme
+
+document.getElementById('theme-toggle').addEventListener('click', () => {
+	const currentTheme = document.documentElement.getAttribute('data-theme');
+	let newTheme;
+  
+	if (currentTheme === 'light') {
+	  newTheme = 'dim';
+	} else if (currentTheme === 'dim') {
+	  newTheme = 'dark';
+	} else if (currentTheme === 'dark') {
+	  newTheme = 'grin';
+	} else {
+	  newTheme = 'light';
+	}
+  
+	document.documentElement.setAttribute('data-theme', newTheme);
+	localStorage.setItem('theme', newTheme); // Save preference
+  });
+  
+  // Load saved theme on page load
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  
+  
+  document.getElementById('switch').addEventListener('click', () => {
+	const currentTheme = document.documentElement.getAttribute('data-theme');
+	let newTheme;
+  
+	if (currentTheme === 'light') {
+	  newTheme = 'dim';
+	} else if (currentTheme === 'dim') {
+	  newTheme = 'dark';
+	} else if (currentTheme === 'dark') {
+	  newTheme = 'grin';
+	} else {
+	  newTheme = 'light';
+	}
+  
+	document.documentElement.setAttribute('data-theme', newTheme);
+	localStorage.setItem('theme', newTheme); // Save preference
+  });
+  
+  // Load saved theme on page load
+  const switchTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', switchTheme);
+ 
