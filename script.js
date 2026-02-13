@@ -242,6 +242,17 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
   // Load saved theme on page load
   const savedTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
+
+// Register Service Worker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("sw.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch((error) => console.log("Service Worker Error:", error));
+  });
+}
+
   
   
   
